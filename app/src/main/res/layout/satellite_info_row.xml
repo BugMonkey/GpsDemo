@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    style="@style/table_row_style"
+    >
+
+    <TextView
+        android:id="@+id/tv_azimuth_degrees"
+        style="@style/satellite_row_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="方向角"
+        />
+
+    <TextView
+        android:id="@+id/tv_elevation_degrees"
+        style="@style/satellite_row_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="高度角"
+        />
+
+    <TextView
+        android:id="@+id/satellite_constellation"
+        style="@style/satellite_row_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="类型"
+        />
+
+    <TextView
+        android:id="@+id/tv_svid"
+        style="@style/satellite_row_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="SVID"
+        />
+
+    <TextView
+        android:id="@+id/tv_carrier_frequency_hz"
+        style="@style/satellite_row_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="MHZ"
+        />
+
+    <TextView
+        android:id="@+id/tv_Cn0_hz"
+        style="@style/satellite_row_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="信噪比 CNR"
+        />
+    <TextView
+        android:id="@+id/tv_baseband_cn0"
+        style="@style/satellite_row_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="载噪比"
+        />
+    <TextView
+        android:id="@+id/almanac"
+        style="@style/satellite_row_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="历书"
+        />
+    <TextView
+        android:id="@+id/ephemeris"
+        style="@style/satellite_row_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        tools:text="星历"
+        />
+    <TextView
+        android:id="@+id/tv_has_almanac"
+        style="@style/satellite_row_text"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        tools:text="使用"
+        />
+</TableRow>

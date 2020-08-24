@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <com.amap.api.maps2d.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+    </com.amap.api.maps2d.MapView>
+
+    <fragment
+        android:id="@+id/location_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.ztstech.gpsdemo.LocationFragment"
+        />
+
+<!--    <ScrollView-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="1.0"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.0"-->
+<!--        >-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="vertical"-->
+<!--            android:paddingBottom="60dp"-->
+<!--            >-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="数据"-->
+<!--                android:textColor="#fff"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textStyle="bold"-->
+<!--                />-->
+<!--            <FrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:text="坐标类型"-->
+<!--                    style="@style/sub_title"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_type"-->
+<!--                    android:text="-"-->
+<!--                    style="@style/sub_text"/>-->
+<!--            </FrameLayout>-->
+
+<!--            <FrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:text="经度"-->
+<!--                    style="@style/sub_title"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_la"-->
+<!--                    android:text="-"-->
+<!--                    style="@style/sub_text"/>-->
+<!--            </FrameLayout>-->
+
+
+<!--            <FrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:text="纬度"-->
+<!--                    style="@style/sub_title"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_lo"-->
+<!--                    android:text="-"-->
+<!--                    style="@style/sub_text"/>-->
+<!--            </FrameLayout>-->
+
+<!--            <FrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:text="精度（米）"-->
+<!--                    style="@style/sub_title"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_accuracy"-->
+<!--                    android:text="-"-->
+<!--                    style="@style/sub_text"/>-->
+<!--            </FrameLayout>-->
+
+<!--            <FrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:text="高度（米）"-->
+<!--                    style="@style/sub_title"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_altitude"-->
+<!--                    android:text="-"-->
+<!--                    style="@style/sub_text"/>-->
+<!--            </FrameLayout>-->
+
+<!--            <FrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:text="方位"-->
+<!--                    style="@style/sub_title"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_bear"-->
+<!--                    android:text="-"-->
+<!--                    style="@style/sub_text"/>-->
+<!--            </FrameLayout>-->
+
+<!--            <FrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:text="速度"-->
+<!--                    style="@style/sub_title"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_speed"-->
+<!--                    android:text="-"-->
+<!--                    style="@style/sub_text"/>-->
+<!--            </FrameLayout>-->
+
+<!--            <FrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:text="定位方式"-->
+<!--                    style="@style/sub_title"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_location_type"-->
+<!--                    android:text="-"-->
+<!--                    style="@style/sub_text"/>-->
+<!--            </FrameLayout>-->
+
+<!--            <FrameLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:text="地址"-->
+<!--                    style="@style/sub_title"/>-->
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_address"-->
+<!--                    android:text="-"-->
+<!--                    style="@style/sub_text"/>-->
+<!--            </FrameLayout>-->
+
+
+<!--            <TextView-->
+<!--                android:id="@+id/tv_satellite_count"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="5dp"-->
+<!--                android:text="卫星总数"-->
+<!--                android:textColor="#fff"-->
+<!--                android:textSize="12sp"-->
+<!--                android:textStyle="bold"-->
+<!--                />-->
+
+<!--            <HorizontalScrollView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                >-->
+
+<!--                <TableLayout-->
+<!--                    android:id="@+id/table_layout"-->
+<!--                    style="@style/table_layout_style"-->
+<!--                    android:padding="5dp"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    >-->
+
+<!--                    <TableRow style="@style/table_row_style">-->
+
+<!--                        <TextView-->
+<!--                            style="@style/satellite_title_text"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="方向角"-->
+
+<!--                            />-->
+
+<!--                        <TextView-->
+<!--                            style="@style/satellite_title_text"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="高度角"-->
+<!--                            />-->
+
+<!--                        <TextView-->
+<!--                            style="@style/satellite_title_text"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="类型"-->
+<!--                            />-->
+
+<!--                        <TextView-->
+<!--                            style="@style/satellite_title_text"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="SVID"-->
+<!--                            />-->
+
+<!--                        <TextView-->
+<!--                            style="@style/satellite_title_text"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="MHZ"-->
+<!--                            />-->
+
+<!--                        <TextView-->
+<!--                            style="@style/satellite_title_text"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="信噪比"-->
+<!--                            />-->
+
+<!--                        <TextView-->
+<!--                            android:id="@+id/tv_baseband_cn0"-->
+<!--                            style="@style/satellite_title_text"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="载噪比"-->
+<!--                            android:visibility="gone"-->
+<!--                            />-->
+
+<!--                        <TextView-->
+<!--                            style="@style/satellite_title_text"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="历书"-->
+<!--                            />-->
+
+<!--                        <TextView-->
+<!--                            style="@style/satellite_title_text"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="星历"-->
+<!--                            />-->
+
+<!--                        <TextView-->
+<!--                            style="@style/satellite_title_text"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:text="使用"-->
+<!--                            />-->
+<!--                    </TableRow>-->
+
+
+<!--                </TableLayout>-->
+
+<!--            </HorizontalScrollView>-->
+
+<!--        </LinearLayout>-->
+<!--    </ScrollView>-->
+</androidx.constraintlayout.widget.ConstraintLayout>

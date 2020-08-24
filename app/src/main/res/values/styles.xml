@@ -1,0 +1,73 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <!--表格数据字体样式-->
+    <style name="satellite_row_text">
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#cb6429</item>
+        <item name="android:showDividers">end|beginning|middle</item>
+        <item name="android:textSize">12sp</item>
+
+    </style>
+
+    <!--标题字体样式-->
+    <style name="satellite_title_text">
+        <item name="android:paddingRight">3dp</item>
+        <item name="android:paddingLeft">3dp</item>
+        <item name="android:paddingTop">1dp</item>
+        <item name="android:paddingBottom">1dp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:showDividers">end|beginning|middle</item>
+        <item name="android:textSize">12sp</item>
+
+    </style>
+
+    <!--行样式-->
+    <style name="table_row_style">
+        <item name="android:divider">@drawable/divider_w</item>
+        <item name="android:showDividers">end|beginning|middle</item>
+<!--        <item name="android:dividerPadding">1dp</item>-->
+        <item name="android:background">#44000000</item>
+
+    </style>
+
+    <!--表格样式-->
+    <style name="table_layout_style">
+        <item name="android:divider">@drawable/divider_h</item>
+        <item name="android:showDividers">end|beginning|middle</item>
+<!--        <item name="android:dividerPadding">1dp</item>-->
+<!--        <item name="android:background">#44000000</item>-->
+    </style>
+
+    <!--小标题样式-->
+    <style name="sub_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:layout_gravity">center_vertical|left</item>
+
+    </style>
+
+    <!--小标题内容样式-->
+    <style name="sub_text">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textColor">#cb6429</item>
+        <item name="android:layout_gravity">center_vertical|right</item>
+    </style>
+
+</resources>
