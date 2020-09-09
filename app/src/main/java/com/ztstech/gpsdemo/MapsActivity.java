@@ -41,7 +41,7 @@ public class MapsActivity extends AppCompatActivity implements View.OnClickListe
     private MapView mMapView;
 
     private String[] permissions = new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
-    LocationFragment locationFragment;
+    WifiFragment locationFragment;
     private AMap aMap;
     private OnLocationChangedListener mListener;
     private AMapLocationClient mlocationClient;
@@ -93,7 +93,7 @@ public class MapsActivity extends AppCompatActivity implements View.OnClickListe
         mMapView = (MapView) findViewById(R.id.map);
         mMapView.onCreate(savedInstanceState);
         initMapView();
-        locationFragment = (LocationFragment) getSupportFragmentManager()
+        locationFragment = (WifiFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.location_fragment);
 
         if (AndPermission.hasPermissions(this, permissions)) {
@@ -122,7 +122,7 @@ public class MapsActivity extends AppCompatActivity implements View.OnClickListe
         aMap.setOnMyLocationChangeListener(new AMap.OnMyLocationChangeListener() {
             @Override
             public void onMyLocationChange(Location location) {
-                locationFragment.showLocationInfo(location);
+//                locationFragment.showLocationInfo(location);
             }
         });
         //设置希望展示的地图缩放级别
@@ -266,7 +266,7 @@ public class MapsActivity extends AppCompatActivity implements View.OnClickListe
             //移到中心
             CameraUpdate mCameraUpdate = CameraUpdateFactory.newCameraPosition(new CameraPosition(new LatLng(aMapLocation.getLatitude(),aMapLocation.getLongitude()),18,30,0));
             aMap.moveCamera(mCameraUpdate);
-            locationFragment.showLocationInfo(aMapLocation);
+//            locationFragment.showLocationInfo(aMapLocation);
 
         }
     }

@@ -13,6 +13,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
+import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -88,7 +89,26 @@ public class LocationFragment extends Fragment {
         initView(view);
         initListener();
         initLocation();
-
+//
+//        getIpName();
+    }
+    // 获取ip运营商
+    public static String getIpName() {
+        String ipName = null;
+        try {
+            TelephonyManager mTelephonyManager = (TelephonyManager) MyApplication
+                    .getContext().getSystemService(Context.TELEPHONY_SERVICE);
+            if (mTelephonyManager != null) {
+                String IMSI = mTelephonyManager.getSubscriberId();
+                if (IMSI != null && !IMSI.equals("") && IMSI.length() >= 5) {
+                    // IMSI号前面3位460是国家，紧接着后面2位00 02是中国移动，01是中国联通，03是中国电信。
+                    ipName = IMSI.substring(3, 5);
+                }
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return ipName;
     }
 
     @Override
