@@ -9,6 +9,7 @@
     >
 
    <com.ztstech.gpsdemo.WifiChannelSheet
+       android:id="@+id/wifi_channel_sheet"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"/>
 
